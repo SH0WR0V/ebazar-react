@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.jpg";
+import Logo from "../../assets/logo.png";
 
 export const Header = () => {
   return (
@@ -7,7 +7,7 @@ export const Header = () => {
       <nav className="bg-white dark:bg-gray-900">
         <div className="border-b border-slate-200 dark:border-b-0 flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-3">
           <Link to="/" className="flex items-center">
-            <img src={Logo} className="mr-3 h-10" alt="CodeBook Logo" />
+            <img src={Logo} className="mr-2 h-10" alt="CodeBook Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-300 dark:hover:text-white">
               Adidas
             </span>
