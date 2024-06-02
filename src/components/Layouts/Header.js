@@ -7,9 +7,9 @@ export const Header = () => {
       <nav className="bg-white dark:bg-gray-900">
         <div className="border-b border-slate-200 dark:border-b-0 flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-3">
           <Link to="/" className="flex items-center">
-            <img src={Logo} className="mr-2 h-10" alt="CodeBook Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-300 dark:hover:text-white">
-              Adidas
+              <img src={Logo} className="mr-2 h-10" alt="Sneakers Logo" />
+            <span className="self-center text-xl text-gray-700 font-semibold whitespace-nowrap dark:text-gray-300 dark:hover:text-white">
+              Sneakers
             </span>
           </Link>
           <div className="flex items-center relative">

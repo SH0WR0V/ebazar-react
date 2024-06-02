@@ -6,7 +6,7 @@ export const Accordion = ({ faq }) => {
 
   return (
     <div className="mt-2 space-y-8 lg:mt-4">
-      <div className="p-8 bg-gray-100 rounded-lg dark:bg-gray-800">
+      <div className="p-5 bg-gray-100 rounded-lg dark:bg-gray-800">
         <button
           onClick={() => setShow(!show)}
           className="flex items-center justify-between w-full"
