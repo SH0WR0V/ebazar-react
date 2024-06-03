@@ -19,7 +19,7 @@ export const ProductList = () => {
     <main>
       <section className="my-5">
         <div className="mx-5 flex justify-between">
-          <span className="text-2xl font-semibold dark:text-slate-100 mb-5">{`All Shoes (${products.length})`}</span>
+          <span className="text-2xl font-semibold text-slate-700 dark:text-slate-100 mb-5">{`All Shoes (${products.length})`}</span>
           <span>
             <button
               onClick={() => setShow(!show)}
@@ -41,7 +41,7 @@ export const ProductList = () => {
           </span>
         </div>
 
-        <div className="flex flex-wrap justify-center lg:flex-row">
+        <div className="flex flex-wrap justify-between lg:flex-row">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

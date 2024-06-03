@@ -1,18 +1,18 @@
 export const Testimonial = () => {
   return (
     <section className="bg-white dark:bg-gray-900">
-      <div className="container px-6 py-10 mx-auto">
-        <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+      <div className="container px-6 py-3 mx-auto">
+        <h1 className="text-2xl font-semibold text-center text-gray-700 capitalize lg:text-3xl dark:text-white">
           What our customers saying
         </h1>
 
-        <div className="flex justify-center mx-auto mt-6">
+        {/* <div className="flex justify-center mx-auto mt-6">
           <span className="inline-block w-40 h-1 bg-gray-600 rounded-full"></span>
           <span className="inline-block w-3 h-1 mx-1 bg-gray-600 rounded-full"></span>
           <span className="inline-block w-1 h-1 bg-gray-600 rounded-full"></span>
-        </div>
+        </div> */}
 
-        <div className="flex items-start max-w-6xl mx-auto mt-16">
+        <div className="flex items-start max-w-6xl mx-auto mt-10">
           <button
             title="left arrow"
             className="hidden p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 lg:block hover:bg-gray-100"

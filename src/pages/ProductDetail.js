@@ -22,13 +22,13 @@ export const ProductDetail = () => {
             <section>
                 <h1 className="mt-10 mb-5 text-4xl text-center font-bold text-gray-900 dark:text-slate-200">{productInfo.name}</h1>
                 {/* <p className="mb-5 bg-sky-500/75 text-lg text-center text-gray-900 dark:text-slate-200">{productInfo.category}</p> */}
-                <div className="flex flex-wrap justify-around">
+                <div className="flex flex-wrap gap-10 justify-around">
                     <div className="max-w-xl my-3">
                         <img className="rounded" src={productInfo.image_local} alt="" />
                     </div>
                     <div className="max-w-xl my-3">
                         <div className="mb-5">
-                            <p className="font-bold">Category: <span className="ml-2 mb-5 font-semibold text-blue-500 border bg-amber-50 rounded-lg px-3 py-1 mr-2">{productInfo.category}</span></p>
+                            <p className="font-bold">Category: <span className="ml-2 mb-5 font-semibold text-gray-900 border bg-yellow-400 rounded-lg px-3 py-1 mr-2">{productInfo.category}</span></p>
                         </div>
 
                         <p className="text-3xl font-bold text-gray-900 dark:text-slate-200">
