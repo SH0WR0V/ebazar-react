@@ -11,7 +11,7 @@ export const Accordion = ({ faq }) => {
           onClick={() => setShow(!show)}
           className="flex items-center justify-between w-full"
         >
-          <h1 className="font-semibold text-gray-700 dark:text-white">
+          <h1 className="font-medium text-gray-700 dark:text-white">
             {question}
           </h1>
 

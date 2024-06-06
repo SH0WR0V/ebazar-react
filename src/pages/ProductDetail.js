@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Rating } from "../components";
+import { useTitle } from "../hooks/useTitle";
 
 export const ProductDetail = () => {
     const { id } = useParams();
     const [productInfo, setProductInfo] = useState({});
+    useTitle(productInfo.name);
 
     useEffect(() => {
         async function fetchProductInfo() {
@@ -48,9 +50,13 @@ export const ProductDetail = () => {
                             {/* <span className="font-semibold text-blue-500 border bg-slate-100 rounded-lg px-3 py-1 mr-2">5 MB</span> */}
                         </p>
 
-                        <ul>
+                        <div className="mt-7 mb-3">
+                            <p className="font-bold">Product Description:</p>
+                        </div>
+
+                        <ul className="list-disc pl-5 space-y-2">
                             {descriptionList.map((item, index) => (
-                                <li className="list-disc" key={index}>{item}</li>
+                                <li className="pl-1" key={index}>{item}</li>
                             ))}
                         </ul>
                         <p className="my-5">

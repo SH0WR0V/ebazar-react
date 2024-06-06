@@ -28,7 +28,7 @@
     },
     {
       "id": 10003,
-      "category": "outdoor",
+      "category": "running",
       "name": "Terrex Soulstride",
       "description": "No matter wherever the trail takes you, the adidas® Outdoor Terrex Soulstride shoes have always got your back. Running shoes featuring breathable mesh upper. Textile lining with cushioned footbed. Lightweight EVA midsole. Classic round toe silhouette. Padded collar and tongue for maximum comfort. Raised sidewalls for enhanced stability. Iconic three-stripe detailing on the quarter. Traditional lace-up closure for a snug fit. flexible rubber outsole. Imported",
       "price": 80.0,
@@ -156,6 +156,7 @@
       "size": 5,
       "best_seller": false
     }
+    
   ],
   "featured_products": [
     {
@@ -186,7 +187,7 @@
     },
     {
       "id": 10003,
-      "category": "outdoor",
+      "category": "running",
       "name": "Terrex Soulstride",
       "description": "No matter wherever the trail takes you, the adidas® Outdoor Terrex Soulstride shoes have always got your back. Running shoes featuring breathable mesh upper. Textile lining with cushioned footbed. Lightweight EVA midsole. Classic round toe silhouette. Padded collar and tongue for maximum comfort. Raised sidewalls for enhanced stability. Iconic three-stripe detailing on the quarter. Traditional lace-up closure for a snug fit. flexible rubber outsole. Imported",
       "price": 80.0,
@@ -195,7 +196,7 @@
       "rating": 3,
       "in_stock": true,
       "size": 4,
-      "best_seller": false
+      "best_seller": true
     }
   ],
   "orders": [],
