@@ -48,7 +48,7 @@ export const ProductList = () => {
           </span>
         </div>
 
-        <div className="flex flex-wrap justify-between lg:flex-row">
+        <div className="flex flex-wrap justify-start lg:flex-row">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
