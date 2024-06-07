@@ -25,8 +25,8 @@ export const ProductList = () => {
   return (
     <main>
       <section className="my-5">
-        <div className="mx-5 flex justify-between">
-          <span className="text-2xl font-semibold text-slate-700 dark:text-slate-100 mb-5">{`All Shoes (${products.length})`}</span>
+        <div className="mx-3 flex justify-between">
+          <span className="text-xl font-semibold text-slate-700 dark:text-slate-100 mb-5 ">{`All Shoes (${products.length})`}</span>
           <span>
             <button
               onClick={() => setShow(!show)}

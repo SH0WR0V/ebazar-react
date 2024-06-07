@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { Search } from "../Sections/Search";
+import { DropdownLoggedIn } from "../Elements/DropdownLoggedIn";
+import { DropdownLoggedOut } from "../Elements/DropdownLoggedOut";
+
 
 export const Header = () => {
   const [darkMode] = useState(JSON.parse(localStorage.getItem("darkMode")) || false);
   const [searchSection, setSearchSection] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
@@ -29,19 +33,21 @@ export const Header = () => {
           </Link>
           <div className="flex items-center relative">
             {/* <span onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"></span> */}
-            <span onClick={() => setSearchSection(!searchSection)} className="cursor-pointer text-xl text-gray-600 hover:text-gray-900 dark:hover:text-white mr-5 bi bi-search"></span>
+            <span onClick={() => setSearchSection(!searchSection)} className="relative cursor-pointer text-xl text-gray-600 hover:text-gray-900 dark:hover:text-white mr-5 bi bi-search"></span>
+            {searchSection && <Search setSearchSection={setSearchSection} />}
             <Link to="/cart" className="text-gray-600 hover:text-gray-900 dark:hover:text-white mr-5">
-              <span className="text-2xl bi bi-bag relative">
-                <span className="text-white text-sm absolute -top-1.5 left-2.5 bg-rose-500 px-1 rounded-full ">
+              <span className="text-2xl bi bi-bag-check relative">
+                <span className="text-white text-sm absolute -top-1.5 left-3 bg-orange-600 px-1 rounded-full ">
                   0
                 </span>
               </span>
             </Link>
-            <span className="bi bi-person-circle cursor-pointer text-2xl text-gray-600 hover:text-gray-900 dark:hover:text-white"></span>
+            <span onMouseEnter={() => setDropDown(true)} className="bi bi-person-circle cursor-pointer text-2xl text-gray-600 hover:text-gray-900 dark:hover:text-white"></span>
+            {dropDown && <DropdownLoggedOut setDropDown={setDropDown} />}
           </div>
         </div>
       </nav>
-      {searchSection && <Search setSearchSection={setSearchSection} />}
+
     </header>
   );
 };
