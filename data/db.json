@@ -211,6 +211,12 @@
       "password": "$2a$10$RLboHWLO/vA.MlVsF1uzO.nC9X1v1dtZW/8WYDOiSUbn5L0HKHll2",
       "name": "S. M. Shahriar",
       "id": 2
+    },
+    {
+      "email": "lymidexyfy@mailinator.com",
+      "password": "$2a$10$eU8C8RFPrXWlAxJcV2P/5uStpJmJIese26OMqxDFo7I9mEe5gzb6i",
+      "name": "Cole Goodman",
+      "id": 3
     }
   ]
 }
