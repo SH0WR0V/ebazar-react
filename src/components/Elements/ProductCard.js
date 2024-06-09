@@ -29,10 +29,10 @@ export const ProductCard = ({ product }) => {
       </Link>
       <div className="p-5">
         <Link to={`/products/${id}`}>
-          <span className="text-sm px-2 py-0.5 rounded-xl bg-yellow-400 text-gray-700 dark:text-white">
+          <span className="text-sm px-2.5 py-0.5 rounded-xl bg-yellow-400 text-gray-700 dark:text-white">
             {category}
           </span>
-          <h5 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="my-2 text-2xl font-bold tracking-tight text-gray-800 dark:text-white">
             {name}
           </h5>
         </Link>

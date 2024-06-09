@@ -22,7 +22,7 @@ export const ProductDetail = () => {
     return (
         <main>
             <section>
-                <h1 className="mt-10 mb-5 text-4xl text-center font-bold text-gray-900 dark:text-slate-200">{productInfo.name}</h1>
+                <h1 className="mt-10 mb-5 text-4xl text-center font-bold text-gray-800 dark:text-slate-200">{productInfo.name}</h1>
                 {/* <p className="mb-5 bg-sky-500/75 text-lg text-center text-gray-900 dark:text-slate-200">{productInfo.category}</p> */}
                 <div className="flex flex-wrap gap-10 justify-around">
                     <div className="max-w-xl my-3">
@@ -30,12 +30,12 @@ export const ProductDetail = () => {
                     </div>
                     <div className="max-w-xl my-3">
                         <div className="mb-5">
-                            <p className="font-bold">Category: <span className="ml-2 mb-5 font-semibold text-gray-900 border bg-yellow-400 rounded-lg px-3 py-1 mr-2">{productInfo.category}</span></p>
+                            <p className="font-bold text-gray-800">Category: <span className="ml-2 mb-5 font-semibold text-gray-800 border bg-yellow-400 rounded-lg px-3 py-1 mr-2">{productInfo.category}</span></p>
                         </div>
 
-                        <p className="text-3xl font-bold text-gray-900 dark:text-slate-200">
+                        <p className="text-3xl font-bold text-gray-800 dark:text-slate-200">
                             <span className="mr-1">$</span>
-                            <span className="">{productInfo.price}</span>
+                            <span className="text-gray-800">{productInfo.price}</span>
                         </p>
                         <p className="my-3">
                             <span>
@@ -51,16 +51,16 @@ export const ProductDetail = () => {
                         </p>
 
                         <div className="mt-7 mb-3">
-                            <p className="font-bold">Product Description:</p>
+                            <p className="font-bold text-gray-800">Product Description:</p>
                         </div>
 
                         <ul className="list-disc pl-5 space-y-2">
                             {descriptionList.map((item, index) => (
-                                <li className="pl-1" key={index}>{item}</li>
+                                <li className="pl-1 text-gray-800" key={index}>{item}</li>
                             ))}
                         </ul>
                         <p className="my-5">
-                            <button className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800">
+                            <button className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700">
                                 Add To Bag <i className="ml-1 bi bi-plus-lg"></i>
                             </button>
                             {/* <button className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800">Remove Item <i className="ml-1 bi bi-trash3"></i></button> */}

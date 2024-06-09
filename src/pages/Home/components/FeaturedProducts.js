@@ -15,7 +15,7 @@ export const FeaturedProducts = () => {
 
   return (
     <section className="my-20">
-      <h1 className="text-2xl font-semibold text-center text-gray-700 pb-5 capitalize lg:text-3xl dark:text-white">Featured Shoes</h1>
+      <h1 className="text-2xl font-bold text-center text-gray-700 pb-5 capitalize lg:text-3xl dark:text-white">Featured Shoes</h1>
       <div className="flex flex-wrap justify-center lg:flex-row">
 
         {products.map((product) => (

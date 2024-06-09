@@ -18,7 +18,7 @@
       "category": "outdoor",
       "name": "Terrex Trailmaker 2",
       "description": "Make your most of outdoor adventures by wearing adidas® Outdoor Terrex Trailmaker 2 shoes. With a lightweight and breathable design, they provide reliable support and cushioning to keep you going. They are made of synthetic/textile upper, textile lining, and removable textile footbed. A rounded toe and lace closure ensures secure fit while EVA midsole provides supportive traction. Rubber outsole",
-      "price": 100.0,
+      "price": 100,
       "poster": "",
       "image_local": "/assets/images/10010.jpg",
       "rating": 4,
@@ -31,7 +31,7 @@
       "category": "running",
       "name": "Terrex Soulstride",
       "description": "No matter wherever the trail takes you, the adidas® Outdoor Terrex Soulstride shoes have always got your back. Running shoes featuring breathable mesh upper. Textile lining with cushioned footbed. Lightweight EVA midsole. Classic round toe silhouette. Padded collar and tongue for maximum comfort. Raised sidewalls for enhanced stability. Iconic three-stripe detailing on the quarter. Traditional lace-up closure for a snug fit. flexible rubber outsole. Imported",
-      "price": 80.0,
+      "price": 80,
       "poster": "",
       "image_local": "/assets/images/10003.jpg",
       "rating": 3,
@@ -83,7 +83,7 @@
       "category": "outdoor",
       "name": "GameCourt 2",
       "description": "Great for Pickleball and Tennis. Perfect your game in these men's adidas tennis shoes. They're made with a breathable, flexible mesh upper to keep you cool and competitive. Padding in the heel locks you in for long rallies, and the durable Adiwear outsole lets you clock up the hours on court as you hone your game. Men's tennis shoes with a padded collar and a durable outsole. BREATHABLE UPPER: Open mesh upper is breathable and flexible. LIGHTWEIGHT MIDSOLE: EVA midsole provides lightweight cushioning. Slip-on style with lace panels. Round toe. Elevated flat silhouette. Padded heel design. Contrasting branding stripes on the upper",
-      "price": 70.0,
+      "price": 70,
       "poster": "",
       "image_local": "/assets/images/10007.jpg",
       "rating": 2,
@@ -156,7 +156,6 @@
       "size": 5,
       "best_seller": false
     }
-    
   ],
   "featured_products": [
     {
@@ -177,7 +176,7 @@
       "category": "outdoor",
       "name": "Terrex Trailmaker 2",
       "description": "Make your most of outdoor adventures by wearing adidas® Outdoor Terrex Trailmaker 2 shoes. With a lightweight and breathable design, they provide reliable support and cushioning to keep you going. They are made of synthetic/textile upper, textile lining, and removable textile footbed. A rounded toe and lace closure ensures secure fit while EVA midsole provides supportive traction. Rubber outsole",
-      "price": 100.0,
+      "price": 100,
       "poster": "",
       "image_local": "/assets/images/10010.jpg",
       "rating": 4,
@@ -190,7 +189,7 @@
       "category": "running",
       "name": "Terrex Soulstride",
       "description": "No matter wherever the trail takes you, the adidas® Outdoor Terrex Soulstride shoes have always got your back. Running shoes featuring breathable mesh upper. Textile lining with cushioned footbed. Lightweight EVA midsole. Classic round toe silhouette. Padded collar and tongue for maximum comfort. Raised sidewalls for enhanced stability. Iconic three-stripe detailing on the quarter. Traditional lace-up closure for a snug fit. flexible rubber outsole. Imported",
-      "price": 80.0,
+      "price": 80,
       "poster": "",
       "image_local": "/assets/images/10003.jpg",
       "rating": 3,
@@ -200,5 +199,18 @@
     }
   ],
   "orders": [],
-  "users": []
+  "users": [
+    {
+      "email": "wiwale@mailinator.com",
+      "password": "$2a$10$ScqmhUMzNn8EtjOQdmBH6ulx3vAwPA5tJ2ENsPeNlmAJlZTiEtEZi",
+      "name": "Warren Underwood",
+      "id": 1
+    },
+    {
+      "email": "shahriar@gmail.com",
+      "password": "$2a$10$RLboHWLO/vA.MlVsF1uzO.nC9X1v1dtZW/8WYDOiSUbn5L0HKHll2",
+      "name": "S. M. Shahriar",
+      "id": 2
+    }
+  ]
 }
