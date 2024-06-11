@@ -1,4 +1,5 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const DropdownLoggedIn = ({ setDropDown }) => {
     const navigate = useNavigate();
@@ -7,6 +8,7 @@ export const DropdownLoggedIn = ({ setDropDown }) => {
         sessionStorage.removeItem("token");
         sessionStorage.removeItem("skid");
         setDropDown(false);
+        toast.warn("You've been loggedout!");
         navigate("/");
     }
 
