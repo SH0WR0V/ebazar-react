@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { Rating } from "./Rating";
+import { useCart } from "../../context";
 
 export const ProductCard = ({ product }) => {
   const { id, category, name, image_local, price, rating, best_seller } = product;
+  const { cartList, addToCart, removeFromCart } = useCart();
 
   return (
-    <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md transform transition-transform duration-200 hover:-translate-y-2 dark:bg-gray-800 dark:border-gray-700">
+    <div className="m-3 min-w-96 bg-white rounded-lg border border-gray-200 shadow-md transform transition-transform duration-200 hover:-translate-y-2 dark:bg-gray-800 dark:border-gray-700">
       <Link to={`/products/${id}`} className="relative">
         {best_seller && (
           <span className="absolute top-4 left-4 px-2 bg-orange-600 bg-opacity-85 text-white rounded">
@@ -35,7 +37,7 @@ export const ProductCard = ({ product }) => {
             <span>$</span>
             <span>{price}</span>
           </span>
-          <button className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700">
+          <button onClick={() => addToCart(product)} className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700">
             Add To Bag <i className="ml-1 bi bi-plus-lg"></i>
           </button>
           {/* <button className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800">Remove Item <i className="ml-1 bi bi-trash3"></i></button> */}

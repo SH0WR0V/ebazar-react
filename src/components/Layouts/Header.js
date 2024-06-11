@@ -5,6 +5,8 @@ import { Search } from "../Sections/Search";
 import { DropdownLoggedIn } from "../Elements/DropdownLoggedIn";
 import { DropdownLoggedOut } from "../Elements/DropdownLoggedOut";
 
+import { useCart } from "../../context";
+
 import '../Others/StickyHeader.css';
 
 
@@ -12,6 +14,8 @@ export const Header = () => {
   const [darkMode] = useState(JSON.parse(localStorage.getItem("darkMode")) || false);
   const [searchSection, setSearchSection] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const { cartList } = useCart();
+
   const token = JSON.parse(sessionStorage.getItem("token"));
 
   const [isSticky, setSticky] = useState(false);
@@ -55,7 +59,7 @@ export const Header = () => {
             <Link to="/cart" className="text-gray-600 hover:text-gray-900 dark:hover:text-white mr-5">
               <span className="text-2xl bi bi-bag-check relative">
                 <span className="text-white text-sm absolute -top-1.5 left-3 bg-rose-500 px-1 rounded-full ">
-                  0
+                  {cartList.length}
                 </span>
               </span>
             </Link>
