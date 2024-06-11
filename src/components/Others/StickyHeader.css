@@ -1,0 +1,18 @@
+/* StickyHeader.css */
+.header {
+    transition: all 0.3s ease;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    
+  }
+
+  .sticky:hover{
+    box-shadow: 0 4px 2px -2px #f1f1f1;
+  }
+  

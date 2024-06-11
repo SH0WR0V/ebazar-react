@@ -2,37 +2,26 @@ import { Link } from "react-router-dom";
 import { Rating } from "./Rating";
 
 export const ProductCard = ({ product }) => {
-  const {
-    id,
-    category,
-    name,
-    image_local,
-    price,
-    rating,
-    best_seller,
-  } = product;
+  const { id, category, name, image_local, price, rating, best_seller } = product;
+
   return (
-    <div className="m-3 min-w-96 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <Link to={`/products/${id}`} className="relative">
         {best_seller && (
-          <span className="absolute top-4 left-4 px-2 bg-orange-600 text-white rounded">
+          <span className="absolute top-4 left-4 px-2 bg-orange-600 bg-opacity-85 text-white rounded">
             Best Seller
           </span>
         )}
         <div className="px-8 py-2">
-          <img
-            className="rounded-t-lg w-full h-64"
-            src={image_local}
-            alt={name}
-          />
+          <img className="rounded-t-lg w-full h-64" src={image_local} alt={name} />
         </div>
       </Link>
       <div className="p-5">
         <Link to={`/products/${id}`}>
-          <span className="text-sm px-2.5 py-0.5 rounded-xl bg-yellow-400 text-gray-700 dark:text-white">
+          <span className="text-sm font-normal px-2.5 py-0.5 rounded-md bg-yellow-500 text-white dark:text-white">
             {category}
           </span>
-          <h5 className="my-2 text-2xl font-bold tracking-tight text-gray-800 dark:text-white">
+          <h5 className="my-1 text-2xl font-bold tracking-tight text-gray-700 dark:text-white">
             {name}
           </h5>
         </Link>
@@ -42,7 +31,7 @@ export const ProductCard = ({ product }) => {
         </div>
 
         <p className="flex justify-between items-center">
-          <span className="text-2xl dark:text-gray-200">
+          <span className="text-2xl font-semibold text-gray-700 dark:text-gray-200">
             <span>$</span>
             <span>{price}</span>
           </span>

@@ -21,7 +21,7 @@
       "price": 100,
       "poster": "",
       "image_local": "/assets/images/10010.jpg",
-      "rating": 4,
+      "rating": 3,
       "in_stock": true,
       "size": 4,
       "best_seller": false
@@ -34,7 +34,7 @@
       "price": 80,
       "poster": "",
       "image_local": "/assets/images/10003.jpg",
-      "rating": 3,
+      "rating": 4,
       "in_stock": true,
       "size": 4,
       "best_seller": true
@@ -47,7 +47,7 @@
       "price": 119.95,
       "poster": "",
       "image_local": "/assets/images/10004.jpg",
-      "rating": 2,
+      "rating": 4,
       "in_stock": false,
       "size": 5,
       "best_seller": true
@@ -60,7 +60,7 @@
       "price": 149.99,
       "poster": "",
       "image_local": "/assets/images/10005.jpg",
-      "rating": 3,
+      "rating": 2,
       "in_stock": true,
       "size": 3,
       "best_seller": false
@@ -125,7 +125,7 @@
       "price": 119.99,
       "poster": "",
       "image_local": "/assets/images/10002.jpg",
-      "rating": 5,
+      "rating": 3,
       "in_stock": true,
       "size": 4,
       "best_seller": false
@@ -138,7 +138,7 @@
       "price": 109.99,
       "poster": "",
       "image_local": "/assets/images/10001.jpg",
-      "rating": 3,
+      "rating": 5,
       "in_stock": true,
       "size": 5,
       "best_seller": true
@@ -151,7 +151,7 @@
       "price": 169.94,
       "poster": "",
       "image_local": "/assets/images/10012.jpg",
-      "rating": 5,
+      "rating": 2,
       "in_stock": true,
       "size": 5,
       "best_seller": false
@@ -179,7 +179,7 @@
       "price": 100,
       "poster": "",
       "image_local": "/assets/images/10010.jpg",
-      "rating": 4,
+      "rating": 3,
       "in_stock": true,
       "size": 4,
       "best_seller": false
@@ -192,7 +192,7 @@
       "price": 80,
       "poster": "",
       "image_local": "/assets/images/10003.jpg",
-      "rating": 3,
+      "rating": 4,
       "in_stock": true,
       "size": 4,
       "best_seller": true
@@ -217,6 +217,12 @@
       "password": "$2a$10$eU8C8RFPrXWlAxJcV2P/5uStpJmJIese26OMqxDFo7I9mEe5gzb6i",
       "name": "Cole Goodman",
       "id": 3
+    },
+    {
+      "email": "talha@gmail.com",
+      "password": "$2a$10$AI5FHiQgUr/02EL7EmK9j.gNwT4ixqloq20H/JxeBSqmh9znTcprK",
+      "name": "Talha Kabir",
+      "id": 4
     }
   ]
 }
