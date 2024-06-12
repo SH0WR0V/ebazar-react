@@ -5,23 +5,23 @@ export const Faq = () => {
   const faqs = [
     {
       "id": 1,
-      "question": "Why should I use CodeBook?",
-      "answer": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus earum dicta nesciunt, nulla alias consequuntur cumque incidunt saepe mollitia esse! Magni praesentium delectus excepturi nostrum illo repellendus cum eius neque, aperiam dolores quaerat quis dolore magnam doloremque minus sint nemo qui necessitatibus at. Perspiciatis, corrupti cum labore quos odio porro!"
+      "question": "What is your return policy?",
+      "answer": "We offer a 30-day return policy for unworn shoes in their original packaging. If you are not completely satisfied with your purchase, you can return the shoes within 30 days of the delivery date for a full refund or exchange. Please ensure the shoes are in their original condition and include the original receipt or proof of purchase."
     },
     {
       "id": 2,
-      "question": "Can I access my eBook on mobile?",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At accusamus nobis tempore perferendis qui, quam, atque reprehenderit vero quaerat, assumenda pariatur eveniet. Maxime eaque, neque corrupti ad minus repudiandae consectetur!"
+      "question": "How do I determine the right shoe size?",
+      "answer": "To determine the right shoe size, we recommend using our size guide, which can be found on each product page. Measure your foot length and width, and compare your measurements to our size chart to find the perfect fit. If you are between sizes, we suggest ordering the larger size for a more comfortable fit. If you need further assistance, our customer service team is available to help."
     },
     {
       "id": 3,
-      "question": "Do you offer refunds?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse iste dolor deserunt expedita quam fugit et inventore amet pariatur. Animi."
+      "question": "How long does shipping take?",
+      "answer": "Shipping times vary depending on your location. Standard shipping typically takes 5-7 business days, while expedited shipping options are available for faster delivery. Once your order is processed, you will receive a confirmation email with tracking information so you can monitor the delivery status. Please note that international shipping may take longer due to customs processing times."
     },
     {
       "id": 4,
-      "question": "Do you support Internation payments?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse iste dolor deserunt expedita quam fugit et inventore amet pariatur. Animi."
+      "question": "Do you offer international shipping?",
+      "answer": "Yes, we offer international shipping to many countries. Shipping rates and delivery times vary depending on the destination. At checkout, you can select your country to view the available shipping options and associated costs. Please be aware that international orders may be subject to customs duties and taxes, which are the responsibility of the customer."
     }
   ];
 

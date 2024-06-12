@@ -5,7 +5,7 @@ import { useCart } from "../../../context";
 
 export const CartList = () => {
     const [checkout, setCheckout] = useState(false);
-    const { cartList, removeFromCart, total } = useCart();
+    const { cartList, total } = useCart();
 
     return (
         <>

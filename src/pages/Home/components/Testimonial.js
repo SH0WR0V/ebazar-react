@@ -35,14 +35,7 @@ export const Testimonial = () => {
 
           <div>
             <p className="flex items-center text-center text-gray-500 lg:mx-8">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-              quam. Odio voluptatem officiis eos illo! Pariatur, totam alias.
-              Beatae accusamus earum quos obcaecati minima molestias. Possimus
-              minima dolores itaque! Esse! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Ea voluptates fugiat corrupti
-              laudantium dolores reiciendis pariatur esse quod nihil quia
-              cupiditate debitis quisquam nemo, accusamus animi explicabo?
-              Architecto, unde laboriosam?
+              I recently purchased a pair of running shoes from this online shop, and I'm thrilled with my experience! The website was easy to navigate, the selection was fantastic, and the prices were competitive. My order arrived quickly and the shoes fit perfectly. The quality is top-notch, and they are incredibly comfortable. I highly recommend this store for anyone looking for great shoes and excellent service!
             </p>
 
             <div className="flex flex-col items-center justify-center mt-8">

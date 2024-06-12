@@ -2,22 +2,35 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Rating } from "../components";
 import { useTitle } from "../hooks/useTitle";
+import { useCart } from "../context";
 
 export const ProductDetail = () => {
     const { id } = useParams();
     const [productInfo, setProductInfo] = useState({});
     useTitle(productInfo.name);
+    const [inCart, setInCart] = useState(false);
+    const { cartList, addToCart, removeFromCart } = useCart();
 
     useEffect(() => {
-        async function fetchProductInfo() {
+        async function fetchproductInfo() {
             const response = await fetch(`http://localhost:8000/products/${id}`);
             const data = await response.json();
             setProductInfo(data);
         }
-        fetchProductInfo();
+        fetchproductInfo();
     }, [id]);
 
     const descriptionList = productInfo.description?.split('.') || [];
+
+    useEffect(() => {
+        const productInfoInCart = cartList.find((item) => item.id === productInfo.id);
+        if (productInfoInCart) {
+            setInCart(true);
+        }
+        else {
+            setInCart(false);
+        }
+    }, [cartList, productInfo.id]);
 
     return (
         <main>
@@ -30,7 +43,7 @@ export const ProductDetail = () => {
                     </div>
                     <div className="max-w-xl my-3">
                         <div className="mb-5">
-                            <p className="font-bold text-gray-800">Category: <span className="ml-2 mb-5 font-semibold text-gray-800 border bg-yellow-400 rounded-lg px-3 py-1 mr-2">{productInfo.category}</span></p>
+                            <p className="font-bold text-xl text-gray-800">Category: <span className="ml-2 mb-5 font-medium text-white border bg-yellow-500 rounded-lg px-3 py-1 mr-2">{productInfo.category}</span></p>
                         </div>
 
                         <p className="text-3xl font-bold text-gray-800 dark:text-slate-200">
@@ -44,14 +57,14 @@ export const ProductDetail = () => {
                         </p>
 
                         <p className="my-4 select-none">
-                            {productInfo.best_seller && (<span className="font-semibold text-amber-500 border bg-amber-50 rounded-lg px-3 py-1 mr-2">BEST SELLER</span>)}
-                            {productInfo.in_stock && (<span className="font-semibold text-emerald-600	border bg-slate-100 rounded-lg px-3 py-1 mr-2">INSTOCK</span>)}
-                            {!productInfo.in_stock && (<span className="font-semibold text-rose-700 border bg-slate-100 rounded-lg px-3 py-1 mr-2">OUT OF STOCK</span>)}
+                            {productInfo.best_seller && (<span className="font-medium bg-orange-600 bg-opacity-85 text-white rounded-lg px-3 py-1 mr-2">BEST SELLER</span>)}
+                            {productInfo.in_stock && (<span className="font-medium bg-green-700 bg-opacity-85 text-white rounded-lg px-3 py-1 mr-2">INSTOCK</span>)}
+                            {!productInfo.in_stock && (<span className="font-medium bg-rose-700 bg-opacity-85 text-white rounded-lg px-3 py-1 mr-2">OUT OF STOCK</span>)}
                             {/* <span className="font-semibold text-blue-500 border bg-slate-100 rounded-lg px-3 py-1 mr-2">5 MB</span> */}
                         </p>
 
                         <div className="mt-7 mb-3">
-                            <p className="font-bold text-gray-800">Product Description:</p>
+                            <p className="font-bold text-gray-800">productInfo Description:</p>
                         </div>
 
                         <ul className="list-disc pl-5 space-y-2">
@@ -60,10 +73,8 @@ export const ProductDetail = () => {
                             ))}
                         </ul>
                         <p className="my-5">
-                            <button className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700">
-                                Add To Bag <i className="ml-1 bi bi-plus-lg"></i>
-                            </button>
-                            {/* <button className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800">Remove Item <i className="ml-1 bi bi-trash3"></i></button> */}
+                            {!inCart && (<button onClick={() => addToCart(productInfo)} className={`inline-flex items-center py-2 px-5 text-lg font-medium text-center text-white bg-gray-600 rounded-lg hover:bg-gray-700 ${productInfo.in_stock ? "" : "cursor-not-allowed"}`} disabled={productInfo.in_stock ? "" : "disabled"}>Add To Bag <i className="ml-1 bi bi-plus-lg"></i></button>)}
+                            {inCart && (<button onClick={() => removeFromCart(productInfo)} className={`inline-flex items-center py-2 px-5 text-lg font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-700 ${productInfo.in_stock ? "" : "cursor-not-allowed"}`} disabled={productInfo.in_stock ? "" : "disabled"}>Remove Item <i className="ml-1 bi bi-trash3"></i></button>)}
                         </p>
                     </div>
                 </div>
