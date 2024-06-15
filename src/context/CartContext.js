@@ -12,29 +12,29 @@ export const CartProvider = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducers, cartInitialState);
 
     function addToCart(product) {
-        const updatedCartList = state.cartList.concat(product);
-        const updatedTotal = state.total + product.price;
+        const updatedCartList = [...state.cartList, { ...product, quantity: 1 }];
+        const updatedTotal = updatedCartList.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
 
         dispatch({
             type: "ADD_TO_CART",
             payload: {
                 products: updatedCartList,
-                total: updatedTotal
+                total: Number(updatedTotal)
             }
-        })
+        });
     }
 
     function removeFromCart(product) {
-        const updatedCartList = state.cartList.filter((item) => (item.id !== product.id));
-        const updatedTotal = state.total - product.price;
+        const updatedCartList = state.cartList.filter((item) => item.id !== product.id);
+        const updatedTotal = updatedCartList.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
 
         dispatch({
             type: "REMOVE_FROM_CART",
             payload: {
                 products: updatedCartList,
-                total: updatedTotal
+                total: Number(updatedTotal)
             }
-        })
+        });
     }
 
     function clearCart() {
@@ -44,7 +44,22 @@ export const CartProvider = ({ children }) => {
                 cartList: [],
                 total: 0
             }
-        })
+        });
+    }
+
+    function updateQuantity(productId, quantity) {
+        const updatedCartList = state.cartList.map((item) =>
+            item.id === productId ? { ...item, quantity } : item
+        );
+        const updatedTotal = updatedCartList.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+
+        dispatch({
+            type: "UPDATE_QUANTITY",
+            payload: {
+                products: updatedCartList,
+                total: Number(updatedTotal)
+            }
+        });
     }
 
     const value = {
@@ -52,14 +67,15 @@ export const CartProvider = ({ children }) => {
         total: state.total,
         addToCart,
         removeFromCart,
-        clearCart
+        clearCart,
+        updateQuantity
     };
 
     return (
         <CartContext.Provider value={value}>
             {children}
         </CartContext.Provider>
-    )
+    );
 }
 
 export const useCart = () => useContext(CartContext);

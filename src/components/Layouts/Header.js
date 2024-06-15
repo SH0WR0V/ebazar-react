@@ -58,7 +58,7 @@ export const Header = () => {
             {searchSection && <Search setSearchSection={setSearchSection} />}
             <Link to="/cart" className="text-gray-600 hover:text-gray-900 dark:hover:text-white mr-5">
               <span className="text-2xl bi bi-bag-check relative">
-                <span className="text-white text-sm absolute -top-1.5 left-2.5 bg-red-500 px-1 rounded-full ">
+                <span className="text-white text-sm absolute -top-1.5 left-3 bg-red-500 px-1 py-0.25 rounded-full ">
                   {cartList.length}
                 </span>
               </span>
