@@ -54,16 +54,16 @@ export const Header = () => {
           </Link>
           <div className="flex items-center relative">
             {/* <span onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"></span> */}
-            <span onClick={() => setSearchSection(!searchSection)} className="relative cursor-pointer text-xl text-gray-600 hover:text-gray-900 dark:hover:text-white mr-5 bi bi-search"></span>
+            <span onClick={() => setSearchSection(!searchSection)} className="relative cursor-pointer text-xl text-gray-700 hover:text-gray-900 dark:hover:text-white mr-5 bi bi-search"></span>
             {searchSection && <Search setSearchSection={setSearchSection} />}
-            <Link to="/cart" className="text-gray-600 hover:text-gray-900 dark:hover:text-white mr-5">
+            <Link to="/cart" className="text-gray-700 hover:text-gray-900 dark:hover:text-white mr-5">
               <span className="text-2xl bi bi-bag-check relative">
                 <span className="text-white text-sm absolute -top-1.5 left-3 bg-red-500 px-1 py-0.25 rounded-full ">
                   {cartList.length}
                 </span>
               </span>
             </Link>
-            <span onMouseEnter={() => setDropDown(true)} className="bi bi-person-circle cursor-pointer text-2xl text-gray-600 hover:text-gray-900 dark:hover:text-white"></span>
+            <span onClick={() => setDropDown(!dropDown)} className="bi bi-person-circle cursor-pointer text-2xl text-gray-700 hover:text-gray-900 dark:hover:text-white"></span>
             {dropDown && (token ? <DropdownLoggedIn setDropDown={setDropDown} /> : <DropdownLoggedOut setDropDown={setDropDown} />)}
           </div>
         </div>
