@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <section className="flex flex-col gap-24 mt-5 mx-5 lg:flex-row dark:text-slate-100 items-center">
+    <section className="flex flex-col gap-24 mt-10 mx-5 lg:flex-row dark:text-slate-100 items-center">
       <div className="text my-5">
         <h1 className="text-5xl font-bold text-slate-700">
           Discover the Best Running Shoes Today!
