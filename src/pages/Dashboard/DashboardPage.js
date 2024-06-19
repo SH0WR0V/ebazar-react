@@ -1,24 +1,22 @@
 import { useEffect, useState } from "react";
 import { DashboardCard } from "./components/DashboardCard";
 import { DashboardEmpty } from "./components/DashboardEmpty";
+import { getUserOrders } from "../../services";
 
 export const DashboardPage = () => {
     const [orders, setOrders] = useState([]);
-    const token = JSON.parse(sessionStorage.getItem("token"));
-    const skid = JSON.parse(sessionStorage.getItem('skid'));
     useEffect(() => {
         async function fetchOrders() {
-            const response = await fetch(`http://localhost:8000/600/orders?user.id=1`, {
-                method: "GET",
-                headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` }
-            });
-            const data = await response.json();
+            const data = await getUserOrders();
             setOrders(data);
         }
         fetchOrders();
-    }, [])
+    }, []);
     return (
         <main>
+            <section>
+                <p className="text-2xl text-center font-semibold text-gray-700 dark:text-slate-100 my-10">My Dashboard</p>
+            </section>
             <section>
                 {orders.length && orders.map((order) => (
                     <DashboardCard key={order.id} order={order} />
