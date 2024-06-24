@@ -57,9 +57,9 @@ export const ProductDetail = () => {
                         </p>
 
                         <p className="my-4 select-none">
-                            {productInfo.best_seller && (<span className="font-medium bg-orange-600 bg-opacity-85 text-white rounded-lg px-3 py-1 mr-2">BEST SELLER</span>)}
-                            {productInfo.in_stock && (<span className="font-medium bg-green-700 bg-opacity-85 text-white rounded-lg px-3 py-1 mr-2">INSTOCK</span>)}
-                            {!productInfo.in_stock && (<span className="font-medium bg-rose-700 bg-opacity-85 text-white rounded-lg px-3 py-1 mr-2">OUT OF STOCK</span>)}
+                            {productInfo.best_seller && (<span className="font-medium bg-orange-700 bg-opacity-85 text-white rounded-lg px-3 py-2 mr-2">BEST SELLER</span>)}
+                            {productInfo.in_stock && (<span className="font-medium bg-green-800 bg-opacity-85 text-white rounded-lg px-3 py-2 mr-2">INSTOCK</span>)}
+                            {!productInfo.in_stock && (<span className="font-medium bg-rose-800 bg-opacity-85 text-white rounded-lg px-3 py-2 mr-2">OUT OF STOCK</span>)}
                             {/* <span className="font-semibold text-blue-500 border bg-slate-100 rounded-lg px-3 py-1 mr-2">5 MB</span> */}
                         </p>
 

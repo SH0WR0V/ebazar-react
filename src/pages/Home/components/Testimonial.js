@@ -1,4 +1,24 @@
 export const Testimonial = () => {
+  const testimonials = [
+    {
+      "id": 1,
+      "review": "Great selection of shoes at reasonable prices. I found the perfect pair of heels for a wedding, and they looked even better in person. My only issue was that the box was slightly damaged upon arrival, but the shoes were in perfect condition. Will definitely shop here again!",
+      "name": "Mia Brown",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "review": "I absolutely love my new sneakers! The fit is perfect, and they are so comfortable for my daily runs. The delivery was super fast, and the customer service was very helpful when I had questions about sizing. Highly recommend!",
+      "name": "John Smith",
+      "img": ""
+    },
+    {
+      "id": 3,
+      "review": "Fantastic experience! I ordered a pair of boots, and they exceeded my expectations. The quality is excellent, and they are very stylish. The website is user-friendly, and the checkout process was quick and easy. Plus, they offer free returns, which is a huge plus!",
+      "name": "Young Dave",
+      "img": ""
+    }
+  ];
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-3 mx-auto">
@@ -13,7 +33,7 @@ export const Testimonial = () => {
         </div> */}
 
         <div className="flex items-start max-w-6xl mx-auto mt-10">
-          <button
+          {/* <button
             title="left arrow"
             className="hidden p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 lg:block hover:bg-gray-100"
           >
@@ -31,32 +51,31 @@ export const Testimonial = () => {
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-          </button>
+          </button> */}
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id}>
+              <p className="flex items-center text-center text-gray-500 lg:mx-8">
+                {`"${testimonial.review}"`}
+              </p>
 
-          <div>
-            <p className="flex items-center text-center text-gray-500 lg:mx-8">
-              I recently purchased a pair of running shoes from this online shop, and I'm thrilled with my experience! The website was easy to navigate, the selection was fantastic, and the prices were competitive. My order arrived quickly and the shoes fit perfectly. The quality is top-notch, and they are incredibly comfortable. I highly recommend this store for anyone looking for great shoes and excellent service!
-            </p>
+              <div className="flex flex-col items-center justify-center mt-8">
+                <img
+                  className="object-cover rounded-full w-14 h-14"
+                  src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  alt=""
+                />
 
-            <div className="flex flex-col items-center justify-center mt-8">
-              <img
-                className="object-cover rounded-full w-14 h-14"
-                src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-
-              <div className="mt-4 text-center">
-                <h1 className="font-semibold text-gray-800 dark:text-white">
-                  Mia Brown
-                </h1>
-                <span className="text-sm text-gray-500 dark:text-gray-400">
-                  Marketer
-                </span>
+                <div className="mt-4 text-center">
+                  <h1 className="font-semibold text-gray-800 dark:text-white">
+                    {testimonial.name}
+                  </h1>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
 
-          <button
+
+          {/* <button
             title="right arrow"
             className="hidden p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 lg:block hover:bg-gray-100"
           >
@@ -74,7 +93,7 @@ export const Testimonial = () => {
                 d="M9 5l7 7-7 7"
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

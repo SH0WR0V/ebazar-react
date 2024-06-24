@@ -1,12 +1,22 @@
-import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { login } from "../services";
+import { useTitle } from "../hooks/useTitle";
 
 export const Login = () => {
+    useTitle("login");
     const navigate = useNavigate();
     const email = useRef();
     const password = useRef();
+    const location = useLocation();
+    const message = location.state?.message;
+
+    useEffect(() => {
+        if (message) {
+            toast.error(message);
+        }
+    }, [message]);
 
     async function handleLogin(event) {
         event.preventDefault();
@@ -16,7 +26,12 @@ export const Login = () => {
         }
 
         const data = await login(authDetail);
-        data.accessToken ? navigate('/products') : toast.error(data);
+        if (data.accessToken) {
+            const from = location.state?.from?.pathname || '/products';
+            navigate(from);
+        } else {
+            toast.error(data.message || 'Login failed');
+        }
     }
 
     return (
