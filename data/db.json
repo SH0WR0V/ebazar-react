@@ -241,45 +241,6 @@
     {
       "products": [
         {
-          "id": 10002,
-          "category": "outdoor",
-          "name": "Terrex Trailmaker 2",
-          "description": "Make your most of outdoor adventures by wearing adidas® Outdoor Terrex Trailmaker 2 shoes. With a lightweight and breathable design, they provide reliable support and cushioning to keep you going. They are made of synthetic/textile upper, textile lining, and removable textile footbed. A rounded toe and lace closure ensures secure fit while EVA midsole provides supportive traction. Rubber outsole",
-          "price": 100,
-          "poster": "",
-          "image_local": "/assets/images/10010.jpg",
-          "rating": 3,
-          "in_stock": true,
-          "size": 4,
-          "best_seller": false,
-          "quantity": 3
-        },
-        {
-          "id": 10001,
-          "category": "outdoor",
-          "name": "Amplimove Trainer",
-          "description": "Reach your peak performance with the adidas Amplimove Trainer for men. Lightweight and cushioned, these shoes provide reliable stability to give you the support you need for all gym training activities. The soft padding keeps your feet comfortable during intense workouts. With their sleek design and timeless muted colour, these trainers also make a statement in any gym setting. Textile and synthetic upper. Lace-up closure. Round-toe silhouette. Textile lining and insole. Rubber outsole",
-          "price": 69.95,
-          "poster": "",
-          "image_local": "/assets/images/10011.jpg",
-          "rating": 5,
-          "in_stock": true,
-          "size": 4,
-          "best_seller": true,
-          "quantity": 1
-        }
-      ],
-      "amount_paid": 369.95,
-      "user": {
-        "name": "S. M. Shahriar",
-        "email": "shahriar@gmail.com",
-        "id": 2
-      },
-      "id": 2
-    },
-    {
-      "products": [
-        {
           "id": 10010,
           "category": "running",
           "name": "Cloudrunner",
@@ -372,22 +333,10 @@
   ],
   "users": [
     {
-      "email": "wiwale@mailinator.com",
-      "password": "$2a$10$ScqmhUMzNn8EtjOQdmBH6ulx3vAwPA5tJ2ENsPeNlmAJlZTiEtEZi",
-      "name": "Warren Underwood",
-      "id": 1
-    },
-    {
       "email": "shahriar@gmail.com",
       "password": "$2a$10$RLboHWLO/vA.MlVsF1uzO.nC9X1v1dtZW/8WYDOiSUbn5L0HKHll2",
       "name": "S. M. Shahriar",
       "id": 2
-    },
-    {
-      "email": "lymidexyfy@mailinator.com",
-      "password": "$2a$10$eU8C8RFPrXWlAxJcV2P/5uStpJmJIese26OMqxDFo7I9mEe5gzb6i",
-      "name": "Cole Goodman",
-      "id": 3
     },
     {
       "email": "talha@gmail.com",
