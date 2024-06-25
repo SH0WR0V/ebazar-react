@@ -7,7 +7,7 @@ export async function login(authDetail) {
         body: JSON.stringify(authDetail)
     });
     if (!response.ok) {
-        throw { message: response.statusText, statusCode: response.status };
+        throw { message: response.statusText, statusCode: response.status }; //eslint-disable-line
     }
 
     const data = await response.json();
@@ -27,7 +27,7 @@ export async function register(authDetail) {
         body: JSON.stringify(authDetail)
     });
     if (!response.ok) {
-        throw { message: response.statusText, statusCode: response.status };
+        throw { message: response.statusText, statusCode: response.status }; //eslint-disable-line
     }
 
     const data = await response.json();
