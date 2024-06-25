@@ -17,7 +17,7 @@ root.render(
     <CartProvider>
       <FilterProvider>
         <ScrollToTop />
-        <ToastContainer position="bottom-right" />
+        <ToastContainer position="bottom-right" theme="dark" />
         <App />
       </FilterProvider>
     </CartProvider>

@@ -20,17 +20,21 @@ export const Login = () => {
 
     async function handleLogin(event) {
         event.preventDefault();
-        const authDetail = {
-            email: email.current.value,
-            password: password.current.value
-        }
+        try {
+            const authDetail = {
+                email: email.current.value,
+                password: password.current.value
+            }
 
-        const data = await login(authDetail);
-        if (data.accessToken) {
-            const from = location.state?.from?.pathname || '/products';
-            navigate(from);
-        } else {
-            toast.error(data.message || 'Login failed');
+            const data = await login(authDetail);
+            if (data.accessToken) {
+                const from = location.state?.from?.pathname || '/products';
+                navigate(from);
+            } else {
+                toast.error(data.message || 'Login failed');
+            }
+        } catch (error) {
+            toast.error(error.message, { position: "bottom-center" });
         }
     }
 

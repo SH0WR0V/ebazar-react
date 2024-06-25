@@ -9,8 +9,12 @@ export const DropdownLoggedIn = ({ setDropDown }) => {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await getUser();
-            data.email ? setUser(data) : handleLogout();
+            try {
+                const data = await getUser();
+                data.email ? setUser(data) : handleLogout();
+            } catch (error) {
+                toast.error(error.message, { position: "bottom-center" });
+            }
         }
         fetchData();
     }, []);

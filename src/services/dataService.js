@@ -11,6 +11,9 @@ export async function getUser() {
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${browserData.token}` }
     }
     const response = await fetch(`http://localhost:8000/600/users/${browserData.skid}`, requestOptions);
+    if (!response.ok) {
+        throw { message: response.statusText, statusCode: response.status };
+    }
     const data = await response.json();
     return data;
 }
@@ -21,6 +24,9 @@ export async function getUserOrders() {
         method: "GET",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${browserData.token}` }
     });
+    if (!response.ok) {
+        throw { message: response.statusText, statusCode: response.status };
+    }
     const data = await response.json();
     return data;
 }
@@ -41,6 +47,9 @@ export async function createOrder(cartList, total, user) {
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${browserData.token}` },
         body: JSON.stringify(order)
     });
+    if (!response.ok) {
+        throw { message: response.statusText, statusCode: response.status };
+    }
     const data = await response.json();
     return data;
 }

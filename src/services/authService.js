@@ -6,6 +6,9 @@ export async function login(authDetail) {
         headers: { "content-Type": "application/json" },
         body: JSON.stringify(authDetail)
     });
+    if (!response.ok) {
+        throw { message: response.statusText, statusCode: response.status };
+    }
 
     const data = await response.json();
 
@@ -23,6 +26,9 @@ export async function register(authDetail) {
         headers: { "content-Type": "application/json" },
         body: JSON.stringify(authDetail)
     });
+    if (!response.ok) {
+        throw { message: response.statusText, statusCode: response.status };
+    }
 
     const data = await response.json();
 
