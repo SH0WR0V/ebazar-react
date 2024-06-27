@@ -26,7 +26,7 @@ export const Faq = () => {
   ];
 
   return (
-    <section className="m-10 p-7 dark:border-slate-700 shadow-sm">
+    <section className="m-10 p-7 dark:border-slate-700">
       <h1 className="text-2xl text-center font-semibold text-slate-700 capitalize lg:text-3xl dark:text-slate-100 pb-10">Questions in mind?</h1>
       <div className="" id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
         {faqs.map((faq) => (

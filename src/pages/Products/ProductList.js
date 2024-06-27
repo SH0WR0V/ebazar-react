@@ -57,7 +57,7 @@ export const ProductList = () => {
         </div>
 
         <div className="flex flex-wrap justify-start lg:flex-row">
-          {loading && <p><img src={Loading} alt="" /></p>}
+          {loading && <p className="m-auto"><img src={Loading} alt="" /></p>}
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-white shadow dark:bg-gray-800">
-      <div className="p-4 mx-auto max-w-screen-xl md:flex md:items-center md:justify-between md:p-6">
+    <footer className="bg-white dark:bg-gray-800">
+      <div className="p-4 mx-auto max-w-screen-xl flex items-center justify-between my-3">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <Link to="/" className="hover:underline">Sneakers</Link>. All Rights Reserved.</span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a href="https://github.com/SH0WR0V" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
