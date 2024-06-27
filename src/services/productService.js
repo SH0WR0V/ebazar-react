@@ -3,7 +3,7 @@ export async function getProductList(searchTerm) {
     if (!response.ok) {
         throw { message: response.statusText, statusCode: response.status }; //eslint-disable-line
     }
-    const data = await response.json()
+    const data = await response.json();
     return data;
 }
 
@@ -12,7 +12,7 @@ export async function getProduct(id) {
     if (!response.ok) {
         throw { message: response.statusText, statusCode: response.status }; //eslint-disable-line
     }
-    const data = await response.json()
+    const data = await response.json();
     return data;
 }
 
@@ -21,6 +21,6 @@ export async function getFeaturedList() {
     if (!response.ok) {
         throw { message: response.statusText, statusCode: response.status }; //eslint-disable-line
     }
-    const data = await response.json()
+    const data = await response.json();
     return data;
 }

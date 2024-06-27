@@ -6,8 +6,10 @@ import { FilterBar } from "./components/FilterBar";
 import { useFilter } from "../../context";
 import { getProductList } from "../../services";
 import { toast } from "react-toastify";
+import Loading from "../../assets/images/loading2.gif";
 
 export const ProductList = () => {
+  const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const { products, initialProductList } = useFilter();
   const search = useLocation().search;
@@ -17,7 +19,9 @@ export const ProductList = () => {
   useEffect(() => {
     async function fetchProducts() {
       try {
+        setLoading(true);
         const data = await getProductList(searchTerm);
+        setLoading(false);
         initialProductList(data);
       } catch (error) {
         toast.info(error.message, { position: "bottom-center" });
@@ -53,6 +57,7 @@ export const ProductList = () => {
         </div>
 
         <div className="flex flex-wrap justify-start lg:flex-row">
+          {loading && <p><img src={Loading} alt="" /></p>}
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
