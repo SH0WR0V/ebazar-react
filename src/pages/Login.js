@@ -38,6 +38,26 @@ export const Login = () => {
         }
     }
 
+    async function handleLoginAsGuest() {
+        email.current.value = "guest@gmail.com";
+        password.current.value = 12345678;
+        try {
+            const authDetail = {
+                email: email.current.value,
+                password: password.current.value
+            }
+            const data = await login(authDetail);
+            if (data.accessToken) {
+                const from = location.state?.from?.pathname || '/products';
+                navigate(from);
+            } else {
+                toast.error(data.message || 'Login failed');
+            }
+        } catch (error) {
+            toast.error(error.message, { position: "bottom-center" });
+        }
+    }
+
     return (
         <main>
             <div className="w-80 m-auto">
@@ -55,7 +75,7 @@ export const Login = () => {
                     </div>
                     <button type="submit" className="text-white bg-gray-600 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Log In</button>
                 </form>
-                {/* <button className="mt-3 cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login As Guest</button> */}
+                <button onClick={handleLoginAsGuest} className="mt-3 cursor-pointer text-white bg-stone-600 hover:bg-stone-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login As Guest</button>
                 <div className="my-8  text-gray-700">
                     <p>Don't have an account? <Link to='/register'><span className="font-medium">Register here</span></Link></p>
                 </div>
