@@ -343,6 +343,12 @@
       "password": "$2a$10$AI5FHiQgUr/02EL7EmK9j.gNwT4ixqloq20H/JxeBSqmh9znTcprK",
       "name": "Talha Kabir",
       "id": 4
+    },
+    {
+      "email": "guest@gmail.com",
+      "password": "$2a$10$JCKWFheer/6hdf7UysCXQOi6LahSuQF4pkvpGbxJh3vYzh/ZR69Ca",
+      "name": "Guest Account",
+      "id": 5
     }
   ]
 }
