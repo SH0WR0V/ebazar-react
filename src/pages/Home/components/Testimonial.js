@@ -1,34 +1,33 @@
-import { useState } from "react";
+import React, { useState } from 'react';
+
+
+const testimonials = [
+  {
+    name: 'Mia Brown',
+    image: 'assets/images/customer 1.jpg',
+    quote: 'Great selection of shoes at reasonable prices. I found the perfect pair of heels for a wedding, and they looked even better in person. My only issue was that the box was slightly damaged upon arrival, but the shoes were in perfect condition. Will definitely shop here again!',
+  },
+  {
+    name: 'John Smith',
+    image: 'assets/images/customer 2.jpg',
+    quote: 'I absolutely love my new sneakers! The fit is perfect, and they are so comfortable for my daily runs. The delivery was super fast, and the customer service was very helpful when I had questions about sizing. Highly recommend!',
+  },
+  {
+    name: 'Young Dave',
+    image: 'assets/images/customer 3.jpg',
+    quote: 'Fantastic experience! I ordered a pair of boots, and they exceeded my expectations. The quality is excellent, and they are very stylish. The website is user-friendly, and the checkout process was quick and easy. Plus, they offer free returns, which is a huge plus!',
+  }
+];
 
 export const Testimonial = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const testimonials = [
-    {
-      "id": 1,
-      "review": "Great selection of shoes at reasonable prices. I found the perfect pair of heels for a wedding, and they looked even better in person. My only issue was that the box was slightly damaged upon arrival, but the shoes were in perfect condition. Will definitely shop here again!",
-      "name": "Mia Brown",
-      "img": ""
-    },
-    {
-      "id": 2,
-      "review": "I absolutely love my new sneakers! The fit is perfect, and they are so comfortable for my daily runs. The delivery was super fast, and the customer service was very helpful when I had questions about sizing. Highly recommend!",
-      "name": "John Smith",
-      "img": ""
-    },
-    {
-      "id": 3,
-      "review": "Fantastic experience! I ordered a pair of boots, and they exceeded my expectations. The quality is excellent, and they are very stylish. The website is user-friendly, and the checkout process was quick and easy. Plus, they offer free returns, which is a huge plus!",
-      "name": "Young Dave",
-      "img": ""
-    }
-  ];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
@@ -36,16 +35,9 @@ export const Testimonial = () => {
       <h1 className="text-2xl font-semibold text-center text-gray-700 capitalize lg:text-3xl dark:text-white">
         What our customers saying
       </h1>
-      <div className="container px-6 py-3 relative w-4/5 mx-auto overflow-hidden flex justify-center items-center">
+      <div className="container relative w-4/5 mx-auto overflow-hidden flex justify-center items-center">
+        <div className="flex items-start max-w-6xl mx-auto">
 
-
-        {/* <div className="flex justify-center mx-auto mt-6">
-        <span className="inline-block w-40 h-1 bg-gray-600 rounded-full"></span>
-        <span className="inline-block w-3 h-1 mx-1 bg-gray-600 rounded-full"></span>
-        <span className="inline-block w-1 h-1 bg-gray-600 rounded-full"></span>
-      </div> */}
-
-        <div className="flex items-start max-w-6xl mx-auto mt-10">
           <button
             onClick={prevSlide}
             title="left arrow"
@@ -66,30 +58,20 @@ export const Testimonial = () => {
               />
             </svg>
           </button>
-          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-            {testimonials.map((testimonial, index) => (
-              <div key={testimonial.id} className={`min-w-full flex flex-col items-center text-center transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
-                <p className="flex items-center text-center text-gray-500 lg:mx-8">
-                  {`"${testimonial.review}"`}
-                </p>
 
-                <div className="flex flex-col items-center justify-center mt-8">
-                  <img
-                    className="object-cover rounded-full w-14 h-14"
-                    src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                    alt=""
-                  />
+          <div className="p-6 bg-white text-center ">
 
-                  <div className="mt-4 text-center">
-                    <h1 className="font-semibold text-gray-800 dark:text-white">
-                      {testimonial.name}
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <p className="mb-4 text-lg text-gray-500">"{testimonials[currentIndex].quote}"</p>
+            <div className="flex flex-col items-center">
+              <img
+                className="object-cover rounded-full w-14 h-14"
+                src={testimonials[currentIndex].image}
+                alt=""
+              />
+              <h3 className="mt-3 text-lg text-gray-700 font-semibold">{testimonials[currentIndex].name}</h3>
+            </div>
+
           </div>
-
 
           <button
             onClick={nextSlide}
@@ -111,8 +93,10 @@ export const Testimonial = () => {
               />
             </svg>
           </button>
+
         </div>
       </div>
-    </section>
+    </section >
   );
 };
+
